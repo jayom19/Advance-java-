@@ -1,38 +1,38 @@
+package ASSIGNEMENT2;
 
-package assignment1;
 
-import java.awt.Color;
-import java.awt.Frame;
-import java.awt.Graphics;
+
+import dem.springlayoutdemo;
 import java.awt.HeadlessException;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-
-public class Q4 extends Frame{
+public class Q4 extends JFrame{
 
     public Q4() throws HeadlessException {
         
+        JButton b=new JButton("add");
+        JButton b1=new JButton("SUb");
+        JButton b2=new JButton("mul");
+        JButton b3=new JButton("div");
+        
+        JPanel p=new JPanel();
+    
+        p.add(b1);
+        p.add(b2);
+        p.add(b3);
+        
+        add(p);
         setSize(500, 500);
         setTitle("JAYOM");
-        setLayout(null);
+        p.setLayout(new BoxLayout(p, BoxLayout.X_AXIS));
         setVisible(true);
-    }
-
-    @Override
-    public void paint(Graphics g) {
-        
-        g.setColor(Color.red);
-        g.fillRect(20, 50, 140, 80);
-         g.drawRect(20, 50, 140, 80);
-        
-         g.setColor(Color.blue);
-         g.fillOval(20, 150, 100, 100);
-         g.drawOval(20, 150, 100, 100);
-         
-         g.setColor(Color.green);
-         g.drawString("JAYOM ", 150, 250);
-    }
+       }
     
     public static void main(String[] args) {
         new Q4();
     }
+    
 }
